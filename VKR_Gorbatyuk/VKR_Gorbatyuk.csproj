@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6EE936B-08B5-4765-85FA-42692FD5BD46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VKR_Gorbatyuk</RootNamespace>
+    <AssemblyName>VKR_Gorbatyuk</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpGL">
+      <HintPath>D:\Загрузки\hcmus-cs-main (1)\hcmus-cs-main\winform-opengl-3d\bin\Debug\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.SceneGraph">
+      <HintPath>D:\Загрузки\hcmus-cs-main (1)\hcmus-cs-main\winform-opengl-3d\bin\Debug\SharpGL.SceneGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.WinForms">
+      <HintPath>D:\Загрузки\hcmus-cs-main (1)\hcmus-cs-main\winform-opengl-3d\bin\Debug\SharpGL.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Axes.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="ClassPOsi.cs" />
+    <Compile Include="ClassError.cs" />
+    <Compile Include="Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResult.Designer.cs">
+      <DependentUpon>FormResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParamGr.cs" />
+    <Compile Include="ParamPP.cs" />
+    <Compile Include="ParamT.cs" />
+    <Compile Include="PlaneSurfaceRenderer.cs" />
+    <Compile Include="PointC.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectagleC.cs" />
+    <Compile Include="RectLocation.cs" />
+    <Compile Include="SearchXYOpt.cs" />
+    <Compile Include="ShapeRenderer.cs" />
+    <EmbeddedResource Include="Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResult.resx">
+      <DependentUpon>FormResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyagach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tyagach3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Crate.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\mg.png" />
+    <Content Include="Resources\P1T.png" />
+    <Content Include="Resources\P2T.png" />
+    <None Include="Resources\t3PP3.png" />
+    <None Include="Resources\t3PP2.png" />
+    <None Include="Resources\t3PP1.png" />
+    <None Include="Resources\t2PP3.png" />
+    <None Include="Resources\t2PP2.png" />
+    <None Include="Resources\t2PP1.png" />
+    <None Include="Resources\P2T1.png" />
+    <Content Include="Resources\P3T.png" />
+    <None Include="Resources\P3T1.png" />
+    <None Include="Resources\PP1.png" />
+    <None Include="Resources\PP2.png" />
+    <None Include="Resources\PP3.png" />
+    <Content Include="Resources\S1ctT.png" />
+    <Content Include="Resources\Sct2T.png" />
+    <Content Include="Resources\St.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
